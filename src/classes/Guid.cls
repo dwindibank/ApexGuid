@@ -1,4 +1,5 @@
 public without sharing class Guid {
+    @InvocableMethod(label='Guid - Create Guid' description='Generate a random string in GUID / UUID format.')
     public static String createGuid() {
         Blob generatedBlob = Crypto.GenerateAESKey(128);
         String hex = EncodingUtil.ConvertTohex(generatedBlob);
